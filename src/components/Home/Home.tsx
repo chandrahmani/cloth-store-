@@ -1,5 +1,5 @@
 import { getProducts } from '@/services/app.services';
-import { Product } from '@/types';
+import { Product } from '@/types/index';
 import { Container, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';

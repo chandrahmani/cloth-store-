@@ -1,5 +1,5 @@
 import { Route } from 'react-router';
-import { ROUTE } from '../types';
+import { ROUTE } from '../types/index';
 import About from '../views/About';
 import { Home, Settings } from '../views/Dashboard';
 import Landing from '../views/Landing/Landing';

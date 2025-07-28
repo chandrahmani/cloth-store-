@@ -35,10 +35,9 @@ export const createTodo = async (
   }
 };
 
-import { Product } from '../types';
+import { Product } from '../types/index';
 
 export const getProducts = async (): Promise<Product[]> => {
-  // Replace with real API call
   return [
     {
       id: 1,

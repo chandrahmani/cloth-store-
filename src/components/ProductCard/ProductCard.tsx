@@ -1,5 +1,5 @@
 import { useCart } from '@/ProductContext/ProductContext';
-import { Product } from '@/types';
+import { Product } from '@/types/index';
 import { Typography, Card, CardMedia, CardContent, Button } from '@mui/material';
 
 function ProductCard({ productList }: { productList: Product }) {
