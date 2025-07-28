@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box } from "@mui/material"
-import { Link } from "react-router"
+import { Box } from '@mui/material';
+import { Link } from 'react-router';
 
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,12 +9,11 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+// import ListItemButton from '@mui/material/ListItemButton';
+// import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { DASHBOARD_NESTED_ROUTES, MAIN_ROUTES } from '../../config/router.config';
-
 
 const drawerWidth = 240;
 const navItems = [...MAIN_ROUTES, DASHBOARD_NESTED_ROUTES[0]];
@@ -35,20 +34,19 @@ export default function Navigation() {
       <List>
         {navItems.map(({ path, title, name }) => (
           <ListItem key={name}>
-              <Link key={name} to={path}>
-                {title}
-              </Link>
+            <Link key={name} to={path}>
+              {title}
+            </Link>
           </ListItem>
         ))}
       </List>
     </Box>
   );
 
-
   return (
     <Box sx={{ display: 'flex' }} mb={8} data-testid="navigation">
       <CssBaseline />
-      <AppBar component="nav" color='primary'>
+      <AppBar component="nav" color="primary">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -67,8 +65,17 @@ export default function Navigation() {
             ReactTW
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map(({name, title, path}) => (
-              <Link key={name} to={path} style={{ padding: "0 5px", textDecoration: "none", fontSize: "18px", color: "#fff" }}>
+            {navItems.map(({ name, title, path }) => (
+              <Link
+                key={name}
+                to={path}
+                style={{
+                  padding: '0 5px',
+                  textDecoration: 'none',
+                  fontSize: '18px',
+                  color: '#fff',
+                }}
+              >
                 {title}
               </Link>
             ))}
