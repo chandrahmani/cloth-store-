@@ -23,6 +23,22 @@ export const getProducts = async (): Promise<Product[]> => {
       image: 'https://img-c.udemycdn.com/course/750x422/5444528_d4e3_5.jpg',
       description: 'Soft cotton t-shirt',
     },
+    {
+      id: 2,
+      name: 'Jeans',
+      price: 650,
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQD_emepUuvs9RGmy21w2xoAEb7f8H0aWVZA&s',
+      description: 'Slim fit denim',
+    },
+    {
+      id: 3,
+      name: 'Cotton Soprts Pants',
+      price: 300,
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ1MQt6P79SxY9m_9gF-kBylmxh0N93Soe9A&s',
+      description: 'Soft cotton t-shirt',
+    },
   ];
 };
 
