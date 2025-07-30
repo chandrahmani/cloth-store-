@@ -14,7 +14,7 @@ function Home() {
     <Container sx={{ py: 4 }}>
       <Grid container spacing={3}>
         {productList.map((product) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
+          <Grid key={product.id}>
             <ProductCard productList={product} />
           </Grid>
         ))}

@@ -18,7 +18,7 @@ export default function Root() {
               <Navigation />
             </ErrorBoundary>
             <ErrorBoundary>
-              <Box component="section" minHeight="60vh">
+              <Box component="section" sx={{ minHeight: '60vh' }}>
                 <Routes>
                   {configureRoute(MAIN_ROUTES)}
 

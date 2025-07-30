@@ -1,13 +1,6 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Grid2 as Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
-import { useEffect, useState } from "react";
-import { fetchUser } from "@/services/app.services";
+import { Avatar, Box, Button, Grid, Paper, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { fetchUser } from '@/services/app.services';
 
 interface User {
   name: string;
@@ -26,7 +19,7 @@ function Profile() {
       const response = await fetchUser();
       setUser(response);
     } catch (error) {
-      console.error("Failed to fetch user profile:", error);
+      console.error('Failed to fetch user profile:', error);
       // Optionally set an error state here
     }
   };
@@ -36,17 +29,17 @@ function Profile() {
   }, []);
 
   if (!user) {
-    return "Loading...";
+    return 'Loading...';
   }
 
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundColor: "#f5f5f5",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#f5f5f5',
         padding: 2,
       }}
     >
@@ -55,8 +48,8 @@ function Profile() {
         sx={{
           padding: 4,
           maxWidth: 600,
-          width: "100%",
-          textAlign: "center",
+          width: '100%',
+          textAlign: 'center',
         }}
       >
         <Grid container spacing={3} justifyContent="center">
@@ -68,8 +61,8 @@ function Profile() {
               sx={{
                 width: 120,
                 height: 120,
-                margin: "0 auto",
-                border: "4px solid #3f51b5",
+                margin: '0 auto',
+                border: '4px solid #3f51b5',
               }}
             />
           </Grid>
@@ -77,10 +70,7 @@ function Profile() {
           {/* Name Section */}
           <Grid size={12}>
             <Typography variant="h4" component="h1" gutterBottom>
-              {user.greet.replace(
-                "{{%totalExperience%}}",
-                user?.totalExperience.toString()
-              )}
+              {user.greet.replace('{{%totalExperience%}}', user?.totalExperience.toString())}
             </Typography>
           </Grid>
 
@@ -105,9 +95,9 @@ function Profile() {
               color="primary"
               sx={{
                 marginTop: 2,
-                padding: "10px 30px",
-                borderRadius: "20px",
-                textTransform: "none",
+                padding: '10px 30px',
+                borderRadius: '20px',
+                textTransform: 'none',
               }}
             >
               Edit Profile

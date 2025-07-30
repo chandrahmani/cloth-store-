@@ -27,7 +27,7 @@ const Checkout: FC = () => {
         <>
           <Grid container spacing={3}>
             {cart.map((item) => (
-              <Grid item xs={12} key={item.id}>
+              <Grid key={item.id} spacing={3}>
                 <Card sx={{ display: 'flex', alignItems: 'center' }}>
                   <CardMedia
                     component="img"
